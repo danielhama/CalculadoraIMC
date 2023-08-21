@@ -33,7 +33,7 @@ class Pessoa{
   }
   @override
   String toString(){
-    double imc = calcularIMC();
+    double imc = calcularIMC().roundToDouble();
     return "Nome: $_nome\nAltura: $_altura\nPeso: $_peso\nIMC: $imc";
   }
 

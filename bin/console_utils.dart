@@ -2,18 +2,19 @@ import 'dart:io';
 
 class ConsoleUtils{
 
-  double? lerdouble(String pergunta)
+  static double? lerdouble(String pergunta)
   {
     print(pergunta);
     String? linha = stdin.readLineSync();
     try{
     return double.parse(linha!);}
     on FormatException{
+      print("Formato inválido, informe um valor no formato 0.00");
       return null;      
     }
   }
 
-    String? lerstring(String pergunta)
+    static String? lerstring(String pergunta)
   {
     print(pergunta);
     String? linha = stdin.readLineSync();
